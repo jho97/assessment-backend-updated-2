@@ -9,10 +9,10 @@ app.use(express.json()); // When we want to be able to accept JSON.
 
 const ctrl = require('./controller.js')
 
-app.get('/api/compliments',)
-app.post('/api/compliment',)
-app.put('/api/compliment/:id',)
-app.delete('/api/compliment/:id',)
+app.get('/api/compliments', ctrl.getCompliments)
+app.post('/api/compliment', ctrl.addCompliment)
+app.put('/api/compliment/:id', ctrl.updateCompliment)
+app.delete('/api/compliment/:id', ctrl.deleteCompliment)
 
 
 app.listen(4000, () => console.log("Server running on 4000"));
