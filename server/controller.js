@@ -17,7 +17,9 @@ module.exports = {
     },
     updateCompliment: (req, res) => {
         const {id} = req.params
+        console.log(id)
         const {complimentText} = req.body
+        console.log(complimentText)
         let updateComp = {
             complimentText,
             id
